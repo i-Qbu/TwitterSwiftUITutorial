@@ -10,9 +10,6 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            //             Text("This is inside a nav view")
-            //                .navigationTitle("Home")
-            //                .navigationBarTitleDisplayMode(.inline)
             TabView {
                 Text("Feed")
                     .tabItem {
@@ -32,7 +29,8 @@ struct ContentView: View {
                         Text("Message")
                     }
             }
-            
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
