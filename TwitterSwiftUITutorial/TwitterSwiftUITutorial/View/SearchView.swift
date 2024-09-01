@@ -9,7 +9,13 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        Text("Hello, World!")
+        ScrollView {
+            VStack {
+                ForEach(0..<10) { _ in
+                    UserCell()
+                }
+            }
+        }.padding(.horizontal)
     }
 }
 

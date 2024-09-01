@@ -14,6 +14,7 @@
 		A8278C562C831FEB0049A117 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C552C831FEB0049A117 /* FeedView.swift */; };
 		A8278C582C8327410049A117 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C572C8327410049A117 /* TweetCell.swift */; };
 		A8278C5A2C83EADF0049A117 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C592C83EADF0049A117 /* SearchView.swift */; };
+		A8278C5F2C8415C10049A117 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C5E2C8415C10049A117 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A8278C552C831FEB0049A117 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		A8278C572C8327410049A117 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		A8278C592C83EADF0049A117 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A8278C5E2C8415C10049A117 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				A8278C552C831FEB0049A117 /* FeedView.swift */,
 				A8278C572C8327410049A117 /* TweetCell.swift */,
 				A8278C592C83EADF0049A117 /* SearchView.swift */,
+				A8278C5E2C8415C10049A117 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				A8278C5A2C83EADF0049A117 /* SearchView.swift in Sources */,
 				A8278C472C8313CE0049A117 /* ContentView.swift in Sources */,
+				A8278C5F2C8415C10049A117 /* UserCell.swift in Sources */,
 				A8278C562C831FEB0049A117 /* FeedView.swift in Sources */,
 				A8278C452C8313CE0049A117 /* TwitterSwiftUITutorialApp.swift in Sources */,
 				A8278C582C8327410049A117 /* TweetCell.swift in Sources */,
