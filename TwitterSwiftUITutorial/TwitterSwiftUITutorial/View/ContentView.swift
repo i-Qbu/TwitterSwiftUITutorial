@@ -33,7 +33,7 @@ struct ContentView: View {
             }
             
             NavigationStack {
-                Text("Message")
+                ConversationsView()
                     .navigationTitle("Message")
                     .navigationBarTitleDisplayMode(.inline)
             }
