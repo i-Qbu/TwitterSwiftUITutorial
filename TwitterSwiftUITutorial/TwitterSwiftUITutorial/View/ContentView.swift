@@ -8,29 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var searchText = ""
     var body: some View {
-        NavigationStack {
-            TabView {
+        TabView {
+            NavigationStack {
                 FeedView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-                
-                Text("Search")
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
-                
-                Text("Message")
-                    .tabItem {
-                        Image(systemName: "envelope")
-                        Text("Message")
-                    }
+                    .navigationTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("Home")
-            .navigationBarTitleDisplayMode(.inline)
+            .tabItem {
+                Image(systemName: "house")
+                Text("Home")
+            }
+            
+            NavigationStack {
+                SearchView()
+                    .navigationTitle("Search")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .searchable(text: $searchText)
+            }
+            .tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Search")
+            }
+            
+            NavigationStack {
+                Text("Message")
+                    .navigationTitle("Message")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+            .tabItem {
+                Image(systemName: "envelope")
+                Text("Message")
+            }
         }
     }
 }
