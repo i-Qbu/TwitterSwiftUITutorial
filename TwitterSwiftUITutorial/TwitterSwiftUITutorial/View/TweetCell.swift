@@ -18,10 +18,10 @@ struct TweetCell: View {
                     .frame(width: 56, height: 56)
                     .clipShape(Circle())
                 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 04) {
                     HStack {
                         Text("i-qbu")
-                            .font(.system(size: 14, weight: .semibold ))
+                            .font(.system(size: 14, weight: .semibold))
                         
                         Text("@iQbu •")
                             .foregroundStyle(.gray)
@@ -33,44 +33,43 @@ struct TweetCell: View {
                     Text("Tweet example sentence.Hoge hoge hoge hoge hoge hoge.")
                 }
             }
-        }.padding(.bottom).padding(.horizontal)
-        
-        HStack {
-            Button(action: {}, label: {
-                Image(systemName: "bubble.left")
-                    .font(.system(size: 16))
-                    .frame(width: 32, height: 32)
-            })
             
-            Spacer()
+            HStack {
+                Button(action: {}, label: {
+                    Image(systemName: "bubble.left")
+                        .font(.system(size: 16))
+                        .frame(width: 32, height: 32)
+                })
+                
+                Spacer()
+                
+                Button(action: {}, label: {
+                    Image(systemName: "arrow.2.squarepath")
+                        .font(.system(size: 16))
+                        .frame(width: 32, height: 32)
+                })
+                
+                Spacer()
+                
+                
+                Button(action: {}, label: {
+                    Image(systemName: "heart")
+                        .font(.system(size: 16))
+                        .frame(width: 32, height: 32)
+                })
+                
+                Spacer()
+                
+                Button(action: {}, label: {
+                    Image(systemName: "bookmark")
+                        .font(.system(size: 16))
+                        .frame(width: 32, height: 32)
+                })
+            }
+            .foregroundStyle(.gray)
             
-            Button(action: {}, label: {
-                Image(systemName: "arrow.2.squarepath")
-                    .font(.system(size: 16))
-                    .frame(width: 32, height: 32)
-            })
-            
-            Spacer()
-            
-            
-            Button(action: {}, label: {
-                Image(systemName: "heart")
-                    .font(.system(size: 16))
-                    .frame(width: 32, height: 32)
-            })
-            
-            Spacer()
-            
-            Button(action: {}, label: {
-                Image(systemName: "bookmark")
-                    .font(.system(size: 16))
-                    .frame(width: 32, height: 32)
-            })
+            Divider()
         }
-        .foregroundStyle(.gray)
-        .padding(.horizontal)
-        
-        Divider()
     }
 }
 
