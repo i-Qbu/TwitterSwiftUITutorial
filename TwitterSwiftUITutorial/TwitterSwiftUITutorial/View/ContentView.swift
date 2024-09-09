@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var searchText = ""
+    
     var body: some View {
         TabView {
             NavigationStack {
@@ -21,12 +22,7 @@ struct ContentView: View {
                 Text("Home")
             }
             
-            NavigationStack {
-                SearchView()
-                    .navigationTitle("Search")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .searchable(text: $searchText)
-            }
+            SearchView(searchText: $searchText)
             .tabItem {
                 Image(systemName: "magnifyingglass")
                 Text("Search")

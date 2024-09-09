@@ -17,7 +17,9 @@ struct ConversationsView: View {
                 VStack {
                     ForEach(0..<100) { _ in
                         NavigationLink(
-                            destination: Text("Chat View"), label: { ConversationCell()
+                            destination: ChatView(),
+                            label: {
+                                ConversationCell()
                             })
                     }
                 }.padding()
@@ -35,10 +37,7 @@ struct ConversationsView: View {
             .clipShape(Circle())
             .padding()
             .sheet(isPresented: $isShowingNewMessageView, content: {
-                NavigationStack {
-                    SearchView()
-                        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-                }
+                SearchView(searchText: $searchText)
             })
         }
     }

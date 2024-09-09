@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Binding var searchText: String
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(0..<10) { _ in
-                    UserCell()
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    ForEach(0..<10) { _ in
+                        UserCell()
+                    }
                 }
             }
-        }.padding(.horizontal)
+            .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.inline)
+            .searchable(text: $searchText,
+                        placement: .navigationBarDrawer(displayMode: .always))
+            .padding(.horizontal)
+        }
     }
 }
 
 #Preview {
-    SearchView()
+    SearchView(searchText: .constant("who?"))
 }
