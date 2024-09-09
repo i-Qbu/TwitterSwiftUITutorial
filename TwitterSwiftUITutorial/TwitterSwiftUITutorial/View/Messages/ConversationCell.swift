@@ -23,6 +23,7 @@ struct ConversationCell: View {
                     
                     Text("Longer messages texxt to see what happens when i do this")
                         .font(.system(size: 15))
+                        .multilineTextAlignment(.leading)
                         .lineLimit(2)
                 }
                 .padding(.trailing)
@@ -30,6 +31,7 @@ struct ConversationCell: View {
             
             Divider()
         }
+        .foregroundStyle(.black)
     }
 }
 
