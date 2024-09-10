@@ -19,6 +19,7 @@
 		A8278C642C841AA70049A117 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C632C841AA70049A117 /* ConversationCell.swift */; };
 		A899B8032C8F03670026C8FA /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8022C8F03670026C8FA /* MessageInputView.swift */; };
 		A899B8052C8F04480026C8FA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8042C8F04480026C8FA /* ChatView.swift */; };
+		A899B8072C8F0BC00026C8FA /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8062C8F0BC00026C8FA /* ChatBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A8278C632C841AA70049A117 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		A899B8022C8F03670026C8FA /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		A899B8042C8F04480026C8FA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		A899B8062C8F0BC00026C8FA /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				A8278C612C841A640049A117 /* ConversationsView.swift */,
 				A8278C632C841AA70049A117 /* ConversationCell.swift */,
 				A899B8042C8F04480026C8FA /* ChatView.swift */,
+				A899B8062C8F0BC00026C8FA /* ChatBubble.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				A8278C5A2C83EADF0049A117 /* SearchView.swift in Sources */,
 				A899B8052C8F04480026C8FA /* ChatView.swift in Sources */,
 				A8278C472C8313CE0049A117 /* ContentView.swift in Sources */,
+				A899B8072C8F0BC00026C8FA /* ChatBubble.swift in Sources */,
 				A8278C5F2C8415C10049A117 /* UserCell.swift in Sources */,
 				A8278C622C841A640049A117 /* ConversationsView.swift in Sources */,
 				A8278C562C831FEB0049A117 /* FeedView.swift in Sources */,
