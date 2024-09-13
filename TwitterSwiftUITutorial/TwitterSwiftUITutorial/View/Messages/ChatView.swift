@@ -9,23 +9,16 @@ import SwiftUI
 
 struct ChatView: View {
     @State var messageText: String = ""
+    
     var body: some View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(0..<15) { _ in
-                        HStack {
-                            Spacer()
-                            Text("Test message text")
-                                .padding()
-                                .background(Color.blue)
-                                .clipShape(ChatBubble(isMine: true))
-                                .foregroundColor(.white)
-                                .padding(.horizontal)
-                        }
+                    ForEach(MOCK_MESSAGES) { message in
+                        MessageView(message: message)
                     }
                 }
-            }
+            }.padding(.top)
             
             MessageInputView(messageText: $messageText)
                 .padding()

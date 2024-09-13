@@ -17,9 +17,12 @@
 		A8278C5F2C8415C10049A117 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C5E2C8415C10049A117 /* UserCell.swift */; };
 		A8278C622C841A640049A117 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C612C841A640049A117 /* ConversationsView.swift */; };
 		A8278C642C841AA70049A117 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8278C632C841AA70049A117 /* ConversationCell.swift */; };
+		A87BA3622C91129D002645E1 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87BA3612C91129D002645E1 /* MessageView.swift */; };
+		A87BA3642C9116A5002645E1 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87BA3632C9116A5002645E1 /* NewMessageView.swift */; };
 		A899B8032C8F03670026C8FA /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8022C8F03670026C8FA /* MessageInputView.swift */; };
 		A899B8052C8F04480026C8FA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8042C8F04480026C8FA /* ChatView.swift */; };
 		A899B8072C8F0BC00026C8FA /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8062C8F0BC00026C8FA /* ChatBubble.swift */; };
+		A899B8092C8FCC650026C8FA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8082C8FCC640026C8FA /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +37,12 @@
 		A8278C5E2C8415C10049A117 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		A8278C612C841A640049A117 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		A8278C632C841AA70049A117 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		A87BA3612C91129D002645E1 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		A87BA3632C9116A5002645E1 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		A899B8022C8F03670026C8FA /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		A899B8042C8F04480026C8FA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A899B8062C8F0BC00026C8FA /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		A899B8082C8FCC640026C8FA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		A8278C522C831F650049A117 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A899B8082C8FCC640026C8FA /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 				A8278C632C841AA70049A117 /* ConversationCell.swift */,
 				A899B8042C8F04480026C8FA /* ChatView.swift */,
 				A899B8062C8F0BC00026C8FA /* ChatBubble.swift */,
+				A87BA3612C91129D002645E1 /* MessageView.swift */,
+				A87BA3632C9116A5002645E1 /* NewMessageView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -201,10 +210,13 @@
 				A899B8052C8F04480026C8FA /* ChatView.swift in Sources */,
 				A8278C472C8313CE0049A117 /* ContentView.swift in Sources */,
 				A899B8072C8F0BC00026C8FA /* ChatBubble.swift in Sources */,
+				A87BA3622C91129D002645E1 /* MessageView.swift in Sources */,
 				A8278C5F2C8415C10049A117 /* UserCell.swift in Sources */,
 				A8278C622C841A640049A117 /* ConversationsView.swift in Sources */,
 				A8278C562C831FEB0049A117 /* FeedView.swift in Sources */,
+				A87BA3642C9116A5002645E1 /* NewMessageView.swift in Sources */,
 				A8278C452C8313CE0049A117 /* TwitterSwiftUITutorialApp.swift in Sources */,
+				A899B8092C8FCC650026C8FA /* Message.swift in Sources */,
 				A8278C582C8327410049A117 /* TweetCell.swift in Sources */,
 				A899B8032C8F03670026C8FA /* MessageInputView.swift in Sources */,
 			);
