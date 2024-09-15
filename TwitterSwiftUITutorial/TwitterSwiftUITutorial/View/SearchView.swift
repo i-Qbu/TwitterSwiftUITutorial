@@ -15,7 +15,10 @@ struct SearchView: View {
             ScrollView {
                 VStack {
                     ForEach(0..<10) { _ in
-                        UserCell()
+                        NavigationLink(
+                            destination: UserProfileView(),
+                            label:  { UserCell() }
+                        )
                     }
                 }
             }
@@ -24,6 +27,7 @@ struct SearchView: View {
             .searchable(text: $searchText,
                         placement: .navigationBarDrawer(displayMode: .always))
             .padding(.horizontal)
+            .foregroundStyle(Color.black)
         }
     }
 }
