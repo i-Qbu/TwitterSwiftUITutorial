@@ -54,6 +54,10 @@ struct ProfileHeaderView: View {
             .padding()
         }
         .padding()
+        
+        ProfileActionButtonView(isCurrentUser: false)
+        
+        Spacer()
     }
 }
 
