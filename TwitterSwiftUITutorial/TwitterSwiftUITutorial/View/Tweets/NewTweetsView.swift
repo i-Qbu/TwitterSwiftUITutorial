@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct NewTweetsView: View {
+    @State private var tweetText: String = ""
+    
     @Binding var isPresented: Bool
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
+                HStack(alignment: .top) {
                     Image(systemName: "person.circle")
                         .resizable()
                         .scaledToFill()
@@ -20,8 +22,14 @@ struct NewTweetsView: View {
                         .frame(width: 64, height: 64)
                         .clipShape(Circle())
                     
-                    Text("What's happening?")
-                        .foregroundStyle(.gray)
+                    
+                    TextEditor(text: $tweetText)
+                        .overlay(alignment: .topLeading) {
+                            Text(tweetText.isEmpty ? "What's happen?" : "")
+                                .foregroundStyle(.gray)
+                                .padding(.horizontal, 4)
+                                .padding(.vertical, 8)
+                        }
                     
                     Spacer()
                 }
