@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  RegistrationView.swift
 //  TwitterSwiftUITutorial
 //
 //  Created by 渡辺大智 on 2024/09/19.
@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-struct LoginView: View {
-    @State var tweetText: String = ""
+struct RegistrationView: View {
+    @State var fullNameText: String = ""
+    @State var emailText: String = ""
+    @State var userNameText: String = ""
     @State var passwardText: String = ""
+    @Environment(\.dismiss) private var dismiss
     
     let textFieldColor = Color(.init(white: 1, alpha: 0.15))
     
     var body: some View {
-        NavigationStack {
             VStack {
                 Spacer(minLength: 80)
                 
@@ -29,9 +31,29 @@ struct LoginView: View {
                 Form {
                     Section {
                         HStack {
+                            Image(systemName: "person")
+                            TextField(text: $fullNameText, prompt: Text("Full Name").foregroundStyle(.white)) {
+                                Text("")
+                            }
+                        }.foregroundStyle(.white)
+                            .listRowBackground(textFieldColor)
+                    }
+                    
+                    Section {
+                        HStack {
                             Image(systemName: "envelope")
-                            TextField(text: $tweetText, prompt: Text("Email").foregroundStyle(.white)) {
-                                Text("Email")
+                            TextField(text: $emailText, prompt: Text("Email").foregroundStyle(.white)) {
+                                Text("")
+                            }
+                        }.foregroundStyle(.white)
+                            .listRowBackground(textFieldColor)
+                    }
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "person")
+                            TextField(text: $userNameText, prompt: Text("Username").foregroundStyle(.white)) {
+                                Text("")
                             }
                         }.foregroundStyle(.white)
                             .listRowBackground(textFieldColor)
@@ -41,7 +63,7 @@ struct LoginView: View {
                         HStack {
                             Image(systemName: "lock.fill")
                             SecureField(text: $passwardText, prompt: Text("Password").foregroundStyle(.white)) {
-                                Text("Password")
+                                Text("")
                             }
                         }
                         .foregroundStyle(.white)
@@ -51,19 +73,7 @@ struct LoginView: View {
                     Button(action: {}, label: {
                         HStack {
                             Spacer()
-                            Text("Forgot Password?")
-                        }
-                        .foregroundStyle(.white)
-                    })
-                    .listRowBackground(Color.blue)
-                    .listRowInsets(EdgeInsets())
-                    .frame(maxWidth: .infinity)
-                    .buttonStyle(BorderlessButtonStyle())
-                    
-                    Button(action: {}, label: {
-                        HStack {
-                            Spacer()
-                            Text("Sign in").fontWeight(.bold)
+                            Text("Sign Up").fontWeight(.bold)
                             Spacer()
                         }
                         .padding(.vertical, 12)
@@ -74,24 +84,23 @@ struct LoginView: View {
                     .listRowInsets(EdgeInsets())
                     .frame(maxWidth: .infinity)
                     .buttonStyle(BorderlessButtonStyle())
-                    
+
                     .listRowBackground(Color.blue)
                 }.scrollContentBackground(.hidden)
                     .padding(.top)
                 
-                NavigationLink(
-                    destination: RegistrationView().navigationBarBackButtonHidden(true),
-                    label: {
-                        HStack {
-                            Text("Don't have an account?")
-                            Text("Sign Up").fontWeight(.semibold)
-                        }.foregroundStyle(.white)
+                HStack {
+                    Button(action: {
+                        dismiss()
+                    }, label: {
+                        Text("Already have an account?")
+                        Text("Sign In").fontWeight(.semibold)
                     })
+                }.foregroundStyle(.white)
             }.background(Color.blue)
-        }
     }
 }
 
 #Preview {
-    LoginView()
+    RegistrationView()
 }
