@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State var emailText: String = ""
     @State var userNameText: String = ""
     @State var passwardText: String = ""
+    @State var showImagePicker = false
     @Environment(\.dismiss) private var dismiss
     
     let textFieldColor = Color(.init(white: 1, alpha: 0.15))
@@ -19,13 +20,16 @@ struct RegistrationView: View {
     var body: some View {
             VStack {
                 Spacer(minLength: 80)
-                
-                Image(systemName: "x.squareroot")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 150)
-                    .scaledToFill()
-                    .foregroundStyle(.white)
+                Button(action: { showImagePicker = true }, label: {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 150)
+                        .scaledToFill()
+                        .foregroundStyle(.white)
+                }).sheet(isPresented: $showImagePicker, content: {
+                    ImagePicker()
+                })
                 
                 
                 Form {

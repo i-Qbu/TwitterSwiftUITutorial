@@ -30,6 +30,7 @@
 		A899B8052C8F04480026C8FA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8042C8F04480026C8FA /* ChatView.swift */; };
 		A899B8072C8F0BC00026C8FA /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8062C8F0BC00026C8FA /* ChatBubble.swift */; };
 		A899B8092C8FCC650026C8FA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899B8082C8FCC640026C8FA /* Message.swift */; };
+		A8D3FFD62CAD5AAB00956C5E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3FFD52CAD5AAB00956C5E /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		A899B8042C8F04480026C8FA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A899B8062C8F0BC00026C8FA /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		A899B8082C8FCC640026C8FA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A8D3FFD52CAD5AAB00956C5E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				A8278C572C8327410049A117 /* TweetCell.swift */,
 				A8278C592C83EADF0049A117 /* SearchView.swift */,
 				A8278C5E2C8415C10049A117 /* UserCell.swift */,
+				A8D3FFD52CAD5AAB00956C5E /* ImagePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				A8278C5A2C83EADF0049A117 /* SearchView.swift in Sources */,
 				A899B8052C8F04480026C8FA /* ChatView.swift in Sources */,
 				A81CC71C2C944EC3005D575A /* ProfileActionButtonView.swift in Sources */,
+				A8D3FFD62CAD5AAB00956C5E /* ImagePicker.swift in Sources */,
 				A8278C472C8313CE0049A117 /* ContentView.swift in Sources */,
 				A899B8072C8F0BC00026C8FA /* ChatBubble.swift in Sources */,
 				A87BA3622C91129D002645E1 /* MessageView.swift in Sources */,
