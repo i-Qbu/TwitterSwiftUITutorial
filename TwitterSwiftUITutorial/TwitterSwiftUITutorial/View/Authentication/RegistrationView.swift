@@ -13,6 +13,8 @@ struct RegistrationView: View {
     @State var userNameText: String = ""
     @State var passwardText: String = ""
     @State var showImagePicker = false
+    @State var selectedUIImage: UIImage?
+    @State var image: Image?
     @Environment(\.dismiss) private var dismiss
     
     let textFieldColor = Color(.init(white: 1, alpha: 0.15))
@@ -21,14 +23,27 @@ struct RegistrationView: View {
             VStack {
                 Spacer(minLength: 80)
                 Button(action: { showImagePicker = true }, label: {
-                    Image(systemName: "plus.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 150)
-                        .scaledToFill()
-                        .foregroundStyle(.white)
-                }).sheet(isPresented: $showImagePicker, content: {
-                    ImagePicker()
+                    ZStack {
+                        if let image = image {
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 150)
+                                .scaledToFill()
+                        } else {
+                            Image(systemName: "plus.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 150)
+                                .scaledToFill()
+                            .foregroundStyle(.white)
+                        }
+                    }
+                }).sheet(isPresented: $showImagePicker, onDismiss: {
+                    guard let selectedImage = selectedUIImage else { return }
+                    image = Image(uiImage: selectedImage)
+                }, content: {
+                    ImagePicker(image: $selectedUIImage)
                 })
                 
                 
