@@ -30,6 +30,7 @@ struct RegistrationView: View {
                                 .scaledToFit()
                                 .frame(height: 150)
                                 .scaledToFill()
+                                .clipShape(Circle())
                         } else {
                             Image(systemName: "plus.circle")
                                 .resizable()
