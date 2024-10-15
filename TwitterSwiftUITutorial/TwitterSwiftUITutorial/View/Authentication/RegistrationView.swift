@@ -16,6 +16,7 @@ struct RegistrationView: View {
     @State var selectedUIImage: UIImage?
     @State var image: Image?
     @Environment(\.dismiss) private var dismiss
+    @ObservedObject var viewModel = AuthViewModel()
     
     let textFieldColor = Color(.init(white: 1, alpha: 0.15))
     
@@ -90,7 +91,15 @@ struct RegistrationView: View {
                         .listRowBackground(textFieldColor)
                     }
                     
-                    Button(action: {}, label: {
+                    Button(action: {
+                        guard let image = selectedUIImage else { return }
+                        viewModel.registerUser(
+                            email: emailText,
+                            password: passwardText,
+                            username: userNameText,
+                            fullName: fullNameText,
+                            profileImage: image)
+                    }, label: {
                         HStack {
                             Spacer()
                             Text("Sign Up").fontWeight(.bold)
